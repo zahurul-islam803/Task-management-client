@@ -7,30 +7,8 @@ const Home = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <div>
+      <div className="px-2 md:px-0">
         <Banner></Banner>
-      </div>
-      <div>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
-        <h1>home</h1>
       </div>
     </>
   );
