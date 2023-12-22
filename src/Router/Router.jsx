@@ -6,6 +6,7 @@ import Registration from "../Pages/Registration";
 import Dashboard from "../Dashboard/Dashboard";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import TaskManager from "../Dashboard/TaskManager";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,12 @@ const router = createBrowserRouter([
         <Dashboard></Dashboard>
       </PrivateRoute>
     ),
+    children: [
+      {
+        path: 'task-manager',
+        element: <TaskManager></TaskManager>
+      }
+    ]
   },
   {
     path: "/login",
