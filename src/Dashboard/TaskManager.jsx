@@ -1,9 +1,13 @@
-
+import CreateTask from "../Components/Dashboard/CreateTask";
 const TaskManager = () => {
   return (
-    <div>
-      <h1>task</h1>
-    </div>
+    <>
+        <div className="">
+          <div>
+            <CreateTask></CreateTask>
+          </div>
+        </div>
+    </>
   );
 };
 

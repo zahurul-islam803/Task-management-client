@@ -7,6 +7,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import TaskManager from "../Dashboard/TaskManager";
+import DisplayTask from "../Components/Dashboard/DisplayTask";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
       {
         path: 'task-manager',
         element: <TaskManager></TaskManager>
-      }
+      },
+      {
+        path: 'show-task',
+        element: <DisplayTask></DisplayTask>
+      },
     ]
   },
   {
