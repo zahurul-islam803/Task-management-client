@@ -1,4 +1,5 @@
-import logo from '../../../public/task-logo.png'
+import { Link } from 'react-router-dom';
+import logo from '../../assets/task-logo.png'
 import NavLinks from "./NavLinks";
 const Navbar = () => {
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
             <NavLinks></NavLinks>
           </ul>
         </div>
-        <div className='flex gap-4 items-center justify-center'>
+        <div className="flex gap-4 items-center justify-center">
           <img src={logo} alt="logo" className="w-[50px]" />
           <a className="text-xl font-medium text-gray-700">TaskUnity</a>
         </div>
@@ -39,7 +40,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Link to={'/dashboard'} className="text-lg text-rose-500 underline mr-6">Dashboard</Link>
       </div>
     </div>
   );
