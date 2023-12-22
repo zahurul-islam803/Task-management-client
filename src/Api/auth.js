@@ -10,8 +10,8 @@ export const saveUser = async (user) => {
   return data;
 };
 
-// get all users
-export const getAllUsers = async () => {
-  const { data } = await axiosSecure.get("/users");
+// get task data
+export const getTask = async (email) => {
+  const { data } = await axiosSecure.get(`/task/${email}`);
   return data;
 };

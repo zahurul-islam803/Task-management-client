@@ -1,19 +1,20 @@
-
 import { useForm } from "react-hook-form"
 import axiosSecure from "../../Api";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const CreateTask = () => {
    const { register, handleSubmit } = useForm()
    const navigate = useNavigate();
-   
+   const {user} = useAuth();
   const onSubmit = async (data) => {
     const taskItem = {
      title: data.title,
      deadlines: data.deadlines,
      description: data.description,
      priority: data.priority,
+     email: user.email,
     }
     const taskRes = await axiosSecure.post("/task", taskItem);
     if(taskRes.data.insertedId){
@@ -22,7 +23,6 @@ const CreateTask = () => {
     } else{
       toast.error('Something went wrong!');
     }
-    console.log(taskRes.data);
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="bg-rose-100 shadow-lg p-6 max-w-xs mt-4 rounded-md">
